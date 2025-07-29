@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:paulina_knop/components.dart';
+import 'package:portfolio_app/components.dart';
 
 /// The main widget for displaying the contact section on web devices.
 class ContactWeb extends StatefulWidget {
@@ -25,8 +25,8 @@ class _ContactWebState extends State<ContactWeb> {
               iconTheme: const IconThemeData(size: 25.0, color: Colors.black),
               flexibleSpace: FlexibleSpaceBar(
                 background: Image.asset(
-                  "assets/contact_image.jpg",
-                  fit: BoxFit.cover,
+                  "assets/picbg.jpg",
+                  fit: BoxFit.fill,
                   filterQuality: FilterQuality.high,
                 ),
               ),
@@ -34,9 +34,7 @@ class _ContactWebState extends State<ContactWeb> {
             ),
           ];
         },
-        body: const SingleChildScrollView(
-          child: ContactFormWeb(),
-        ),
+        body: const SingleChildScrollView(child: ContactFormWeb()),
       ),
     );
   }

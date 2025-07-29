@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:paulina_knop/components.dart';
+import 'package:portfolio_app/components.dart';
 
-/// The main widget for displaying the about section on web devices.
 class AboutWeb extends StatefulWidget {
   const AboutWeb({Key? key}) : super(key: key);
 
@@ -22,10 +21,7 @@ class _AboutWebState extends State<AboutWeb> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0.0,
-        iconTheme: const IconThemeData(
-          size: 25.0,
-          color: Colors.black,
-        ),
+        iconTheme: const IconThemeData(size: 25.0, color: Colors.black),
         title: const TabsWebList(),
       ),
       body: ListView(
@@ -44,32 +40,32 @@ class _AboutWebState extends State<AboutWeb> {
                     const SansBold("About me", 40.0),
                     const SizedBox(height: 15.0),
                     const Sans(
-                      "Hello! I'm Paulina Knop. I specialize in flutter development.",
+                      "Hi! I'm Sumit Kushwaha. I specialize in Flutter development",
                       15.0,
                     ),
                     const Sans(
-                      "I strive to ensure astounding performance with state of the art security for Android, iOS, Web, Mac, Linux and Windows.",
+                      "I aim to deliver exceptional performance paired with cutting-edge security across Android, iOS, Web, macOS, and Linux platforms.",
                       15.0,
                     ),
                     const SizedBox(height: 10.0),
                     Row(
                       children: [
-                        tealContainer("Flutter"),
+                        OrangeContainer("Flutter"),
                         const SizedBox(width: 7.0),
-                        tealContainer("Firebase"),
+                        OrangeContainer("Firebase"),
                         const SizedBox(width: 7.0),
-                        tealContainer("Android"),
+                        OrangeContainer("Android"),
                         const SizedBox(width: 7.0),
-                        tealContainer("iOS"),
+                        OrangeContainer("iOS"),
                         const SizedBox(width: 7.0),
-                        tealContainer("Windows"),
+                        OrangeContainer("Windows"),
                       ],
                     ),
                   ],
                 ),
                 CircleAvatar(
                   radius: 147.0,
-                  backgroundColor: Colors.tealAccent,
+                  backgroundColor: const Color(0xFFFF7043),
                   child: CircleAvatar(
                     radius: 143.0,
                     backgroundColor: Colors.black,
@@ -77,7 +73,8 @@ class _AboutWebState extends State<AboutWeb> {
                       radius: 140.0,
                       backgroundColor: Colors.white,
                       child: Image.asset(
-                        "assets/profile2-circle.png",
+                        "assets/img5.png",
+
                         filterQuality: FilterQuality.high,
                       ),
                     ),
@@ -104,7 +101,7 @@ class _AboutWebState extends State<AboutWeb> {
                     SansBold("Web development", 30.0),
                     SizedBox(height: 15.0),
                     Sans(
-                      "I'm here to build your presence online with state of the art web apps.",
+                      "I help establish your digital presence through modern, high-performance web applications.",
                       15.0,
                     ),
                   ],
@@ -125,7 +122,7 @@ class _AboutWebState extends State<AboutWeb> {
                     SansBold("App development", 30.0),
                     SizedBox(height: 15.0),
                     Sans(
-                      "Do you need a high-performance, responsive and beautiful app? Don't worry, I've got you covered.",
+                      "Looking for a fast, responsive, and visually stunning app? Relax — I’ll take care of it for you.",
                       15.0,
                     ),
                   ],
@@ -157,7 +154,7 @@ class _AboutWebState extends State<AboutWeb> {
                     SansBold("Back-end development", 30.0),
                     SizedBox(height: 15.0),
                     Sans(
-                      "Do you want your back-end to be highly scalable and secure? Let's have a conversation on how I can help you with that.",
+                      "Want a back-end that’s both scalable and secure? Let’s connect and explore how I can support your goals.",
                       15.0,
                     ),
                   ],

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:paulina_knop/components.dart';
+import 'package:portfolio_app/components.dart';
 
-/// The main widget for displaying the landing page on web devices.
 class LandingPageWeb extends StatefulWidget {
   const LandingPageWeb({Key? key}) : super(key: key);
 
@@ -17,21 +16,16 @@ class _LandingPageWebState extends State<LandingPageWeb> {
     var widthDevice = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      // Drawer for navigation
       drawer: const DrawersWeb(),
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0.0,
-        iconTheme: const IconThemeData(
-          size: 25.0,
-          color: Colors.black,
-        ),
+        iconTheme: const IconThemeData(size: 25.0, color: Colors.black),
         title: const TabsWebList(),
       ),
       body: ListView(
         children: [
-          // First section: Introduction
           Container(
             height: heightDevice - 56,
             child: Row(
@@ -43,7 +37,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                   children: [
                     Container(
                       decoration: const BoxDecoration(
-                        color: Colors.tealAccent,
+                        color: const Color(0xFFFF7043),
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(20.0),
                           topRight: Radius.circular(20.0),
@@ -57,14 +51,14 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                       child: const SansBold("Hello I'm", 15.0),
                     ),
                     const SizedBox(height: 15.0),
-                    const SansBold("Paulina Knop", 55.0),
+                    const SansBold("Sumit Kushwaha", 55.0),
                     const Sans("Flutter developer", 30.0),
                     const SizedBox(height: 15.0),
                     Row(
                       children: const [
                         Icon(Icons.email),
                         SizedBox(width: 20.0),
-                        Sans("paulinaknop@gmail.com", 15.0),
+                        Sans("sumitkk005@gmail.com", 15.0),
                       ],
                     ),
                     const SizedBox(height: 10.0),
@@ -72,7 +66,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                       children: const [
                         Icon(Icons.call),
                         SizedBox(width: 20.0),
-                        Sans("+48 942 564 985", 15.0),
+                        Sans("+91 7976362058", 15.0),
                       ],
                     ),
                     const SizedBox(height: 10.0),
@@ -80,21 +74,21 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                       children: const [
                         Icon(Icons.location_pin),
                         SizedBox(width: 20.0),
-                        Sans("13/3, Szczecin, Poland", 15.0),
+                        Sans("Sitapura,Jaipur", 15.0),
                       ],
                     ),
                   ],
                 ),
                 const CircleAvatar(
                   radius: 147.0,
-                  backgroundColor: Colors.tealAccent,
+                  backgroundColor: const Color(0xFFFF7043),
                   child: CircleAvatar(
                     radius: 143.0,
                     backgroundColor: Colors.black,
                     child: CircleAvatar(
                       radius: 140.0,
                       backgroundColor: Colors.white,
-                      backgroundImage: AssetImage("assets/image-circle.png"),
+                      backgroundImage: AssetImage("assets/pic1.jpg"),
                     ),
                   ),
                 ),
@@ -109,35 +103,37 @@ class _LandingPageWebState extends State<LandingPageWeb> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset("assets/web.jpg", height: widthDevice / 1.9),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const SansBold("About me", 40.0),
-                    const SizedBox(height: 15.0),
-                    const Sans(
-                      "Hello! I'm Paulina Knop. I specialize in flutter development.",
-                      15.0,
-                    ),
-                    const Sans(
-                      "I strive to ensure astounding performance with state of the art security for Android, iOS, Web, Mac, Linux, and Windows.",
-                      15.0,
-                    ),
-                    const SizedBox(height: 10.0),
-                    Row(
-                      children: [
-                        tealContainer("Flutter"),
-                        const SizedBox(width: 7.0),
-                        tealContainer("Firebase"),
-                        const SizedBox(width: 7.0),
-                        tealContainer("Android"),
-                        const SizedBox(width: 7.0),
-                        tealContainer("iOS"),
-                        const SizedBox(width: 7.0),
-                        tealContainer("Windows"),
-                      ],
-                    ),
-                  ],
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const SansBold("About me", 40.0),
+                      const SizedBox(height: 15.0),
+                      const Sans(
+                        "Hi! I'm Sumit Kushwaha. I specialize in Flutter development",
+                        15.0,
+                      ),
+                      const Sans(
+                        "I aim to deliver exceptional performance paired with cutting-edge security across Android, iOS, Web, macOS, and Linux platforms.",
+                        15.0,
+                      ),
+                      const SizedBox(height: 10.0),
+                      Row(
+                        children: [
+                          OrangeContainer("Flutter"),
+                          const SizedBox(width: 7.0),
+                          OrangeContainer("Firebase"),
+                          const SizedBox(width: 7.0),
+                          OrangeContainer("Android"),
+                          const SizedBox(width: 7.0),
+                          OrangeContainer("iOS"),
+                          const SizedBox(width: 7.0),
+                          OrangeContainer("Windows"),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),

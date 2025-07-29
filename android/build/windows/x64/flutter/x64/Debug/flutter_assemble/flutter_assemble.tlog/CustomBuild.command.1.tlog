@@ -1,0 +1,28 @@
+^C:\USERS\SUMIT\ANDROIDSTUDIOPROJECTS\PORTFOLIO_APP\ANDROID\BUILD\WINDOWS\X64\CMAKEFILES\51B7AD3ED21025032183A1B1F4536CFF\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\flutter PROJECT_DIR=C:\Users\sumit\AndroidStudioProjects\portfolio_app\android FLUTTER_ROOT=C:\flutter FLUTTER_EPHEMERAL_DIR=C:\Users\sumit\AndroidStudioProjects\portfolio_app\android\windows\flutter\ephemeral PROJECT_DIR=C:\Users\sumit\AndroidStudioProjects\portfolio_app\android FLUTTER_TARGET=C:\Users\sumit\AndroidStudioProjects\portfolio_app\android\lib/main.dart DART_DEFINES=RkxVVFRFUl9WRVJTSU9OPTMuMzIuNg==,RkxVVFRFUl9DSEFOTkVMPXN0YWJsZQ==,RkxVVFRFUl9HSVRfVVJMPWh0dHBzOi8vZ2l0aHViLmNvbS9mbHV0dGVyL2ZsdXR0ZXIuZ2l0,RkxVVFRFUl9GUkFNRVdPUktfUkVWSVNJT049MDc3YjRhNGNlMQ==,RkxVVFRFUl9FTkdJTkVfUkVWSVNJT049NzJmMmIxOGJiMA==,RkxVVFRFUl9EQVJUX1ZFUlNJT049My44LjE= DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=C:\Users\sumit\AndroidStudioProjects\portfolio_app\android\.dart_tool\package_config.json C:/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\SUMIT\ANDROIDSTUDIOPROJECTS\PORTFOLIO_APP\ANDROID\BUILD\WINDOWS\X64\CMAKEFILES\F8E870497DC6B9BB2BFA6B9B61EA8C4F\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\SUMIT\ANDROIDSTUDIOPROJECTS\PORTFOLIO_APP\ANDROID\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/sumit/AndroidStudioProjects/portfolio_app/android/windows -BC:/Users/sumit/AndroidStudioProjects/portfolio_app/android/build/windows/x64 --check-stamp-file C:/Users/sumit/AndroidStudioProjects/portfolio_app/android/build/windows/x64/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

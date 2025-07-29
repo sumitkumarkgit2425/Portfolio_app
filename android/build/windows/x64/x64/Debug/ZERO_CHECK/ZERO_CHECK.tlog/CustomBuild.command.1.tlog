@@ -1,0 +1,10 @@
+^C:\USERS\SUMIT\ANDROIDSTUDIOPROJECTS\PORTFOLIO_APP\ANDROID\BUILD\WINDOWS\X64\CMAKEFILES\4FD41F62B2BC3DBDC31BCD95CEE390D5\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/sumit/AndroidStudioProjects/portfolio_app/android/windows -BC:/Users/sumit/AndroidStudioProjects/portfolio_app/android/build/windows/x64 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/sumit/AndroidStudioProjects/portfolio_app/android/build/windows/x64/android.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

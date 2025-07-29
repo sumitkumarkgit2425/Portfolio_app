@@ -1,7 +1,7 @@
-name: paulina_knop
+name: portfolio_app
 description: Welcome to this Flutter-based portfolio application, designed to showcase an individual's achievements, skills, and projects.
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none'
 
 version: 1.0.0+1
 
@@ -12,20 +12,21 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
-  google_fonts: ^6.1.0
-  flutter_svg: ^2.0.7
-  url_launcher: ^6.0.0
-  url_strategy: ^0.3.0
-  cloud_firestore: ^5.1.0
-  logger: ^2.0.2+1
+  google_fonts: ^6.2.1
+  flutter_svg: ^2.0.9
+  url_launcher: ^6.3.2
+  cloud_firestore: ^5.4.0
+  logger: ^2.2.0
+  # url_strategy: ^0.3.0  # ❌ Removed (discontinued)
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^6.0.0
+  flutter_lints: ^6.0.0  # ✅ Compatible version
 
 flutter:
   uses-material-design: true
 
   assets:
     - assets/
+    - assets/pic4.jpg

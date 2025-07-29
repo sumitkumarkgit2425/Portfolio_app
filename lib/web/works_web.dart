@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:paulina_knop/components.dart';
+import 'package:portfolio_app/components.dart';
 
 /// The main widget for displaying the works section on the web.
 class WorksWeb extends StatefulWidget {
@@ -28,7 +28,7 @@ class _WorksWebState extends State<WorksWeb> {
               iconTheme: const IconThemeData(size: 25.0, color: Colors.black),
               flexibleSpace: FlexibleSpaceBar(
                 background: Image.asset(
-                  "assets/works.jpg",
+                  "assets/mydesk.jpg",
                   fit: BoxFit.cover,
                   filterQuality: FilterQuality.high,
                 ),
@@ -47,7 +47,7 @@ class _WorksWebState extends State<WorksWeb> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     const AnimatedCard(
-                      imagePath: "assets/portfolio_screenshot.PNG",
+                      imagePath: "assets/img.png",
                       height: 200.0,
                       width: 300.0,
                     ),
@@ -58,7 +58,7 @@ class _WorksWebState extends State<WorksWeb> {
                           SansBold("Portfolio", 30.0),
                           SizedBox(height: 15.0),
                           Sans(
-                            "Deployed on Android, IOS and Web, the portfolio project was truly an achievement. I used Flutter to develop the beautiful and responsive UI and Firebase for the back-end.",
+                            "Successfully deployed on Android, iOS, and Web, this portfolio project stands as a significant achievement. I used Flutter to craft a responsive and visually appealing UI, while leveraging Firebase for robust backend support.",
                             15.0,
                           ),
                         ],

@@ -4,16 +4,6 @@ import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
 
-/// Default [FirebaseOptions] for use with your Firebase apps.
-///
-/// Example:
-/// ```dart
-/// import 'firebase_options.dart';
-/// // ...
-/// await Firebase.initializeApp(
-///   options: DefaultFirebaseOptions.currentPlatform,
-/// );
-/// ```
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
@@ -44,41 +34,37 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDV6TiAOypowEIwKiBPd46nYNIHZU2Lw14',
-    appId: '1:555718417628:web:de754578937e1dab4be819',
-    messagingSenderId: '555718417628',
-    projectId: 'portfolio-782e9',
-    authDomain: 'portfolio-782e9.firebaseapp.com',
-    storageBucket: 'portfolio-782e9.firebasestorage.app',
-    measurementId: 'G-DMWX170PZ9',
+    apiKey: 'AIzaSyCnrBXmxejowFVP3b8BWPe0kemE3rHV4Pg',
+    appId: '1:920401170423:web:7115c4497151f1088ee8f2',
+    messagingSenderId: '920401170423',
+    projectId: 'portfolio-app-a1417',
+    authDomain: 'portfolio-app-a1417.firebaseapp.com',
+    storageBucket: 'portfolio-app-a1417.firebasestorage.app',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCJemnZV4Seo9n_atjl-FIrGEKa1yf95Ww',
-    appId: '1:555718417628:android:efd938149254de844be819',
-    messagingSenderId: '555718417628',
-    projectId: 'portfolio-782e9',
-    storageBucket: 'portfolio-782e9.firebasestorage.app',
+    apiKey: 'AIzaSyD5UInzDYrTQOWmDfMuoyAa41yM4UoiuvU',
+    appId: '1:920401170423:android:46864b9c3ae4de948ee8f2',
+    messagingSenderId: '920401170423',
+    projectId: 'portfolio-app-a1417',
+    storageBucket: 'portfolio-app-a1417.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCwUlLQUxAmcu6-k3onacgaUX_8DrZqwkw',
-    appId: '1:555718417628:ios:b6c3e43ba75d4f8e4be819',
-    messagingSenderId: '555718417628',
-    projectId: 'portfolio-782e9',
-    storageBucket: 'portfolio-782e9.firebasestorage.app',
-    iosClientId: '555718417628-v5r90hccobuaf7jhs6p5ahbpbh28cnk3.apps.googleusercontent.com',
+    apiKey: 'AIzaSyC5U5R-ZeGns5VFPkWPBwDwFzjc9gj0SdM',
+    appId: '1:920401170423:ios:f599057ad617af2f8ee8f2',
+    messagingSenderId: '920401170423',
+    projectId: 'portfolio-app-a1417',
+    storageBucket: 'portfolio-app-a1417.firebasestorage.app',
     iosBundleId: 'com.codingliquids.paulinaKnop',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyDBteJ2zmqFASOcxok7T-hlAkx6CpT2yoc',
-    appId: '1:555718417628:web:678ba3c81f59be354be819',
-    messagingSenderId: '555718417628',
-    projectId: 'portfolio-782e9',
-    authDomain: 'portfolio-782e9.firebaseapp.com',
-    storageBucket: 'portfolio-782e9.firebasestorage.app',
-    measurementId: 'G-JF0GKJ5MRS',
+    apiKey: 'AIzaSyCnrBXmxejowFVP3b8BWPe0kemE3rHV4Pg',
+    appId: '1:920401170423:web:c62932f3e07b65598ee8f2',
+    messagingSenderId: '920401170423',
+    projectId: 'portfolio-app-a1417',
+    authDomain: 'portfolio-app-a1417.firebaseapp.com',
+    storageBucket: 'portfolio-app-a1417.firebasestorage.app',
   );
-
 }

@@ -1,10 +1,9 @@
 # Project-level configuration.
 cmake_minimum_required(VERSION 3.14)
-project(paulina_knop LANGUAGES CXX)
+project(portfolio_app LANGUAGES CXX)
 
-# The name of the executable created for the application. Change this to change
-# the on-disk name of your application.
-set(BINARY_NAME "paulina_knop")
+# Configure output directories
+set(BINARY_NAME "portfolio_app")
 
 # Explicitly opt in to modern CMake behaviors to avoid warnings with recent
 # versions of CMake.

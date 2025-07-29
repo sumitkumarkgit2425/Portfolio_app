@@ -5,29 +5,25 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:logger/logger.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-// Logger instance for debugging purposes
 final Logger logger = Logger();
 
-// Text editing controllers for managing input fields in forms
 final TextEditingController _firstNameController = TextEditingController();
 final TextEditingController _lastNameController = TextEditingController();
 final TextEditingController _emailController = TextEditingController();
 final TextEditingController _phoneController = TextEditingController();
 final TextEditingController _messageController = TextEditingController();
 
-// A StatefulWidget for creating navigation tabs on the web
 class TabsWeb extends StatefulWidget {
   final String title; // Title of the tab
   final String route; // Route to navigate to when the tab is clicked
 
   const TabsWeb({Key? key, required this.title, required this.route})
-      : super(key: key);
+    : super(key: key);
 
   @override
   _TabsWebState createState() => _TabsWebState();
 }
 
-// State class for TabsWeb
 class _TabsWebState extends State<TabsWeb> {
   bool isSelected = false; // Boolean to track if the tab is selected
 
@@ -35,7 +31,6 @@ class _TabsWebState extends State<TabsWeb> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // Navigate to the specified route when the tab is clicked
         Navigator.of(context).pushNamed(widget.route);
       },
       child: MouseRegion(
@@ -54,17 +49,12 @@ class _TabsWebState extends State<TabsWeb> {
           curve: Curves.elasticIn,
           style: isSelected
               ? GoogleFonts.roboto(
-                  shadows: [
-                    Shadow(
-                      color: Colors.black,
-                      offset: Offset(0, -8),
-                    ),
-                  ],
+                  shadows: [Shadow(color: Colors.black, offset: Offset(0, -8))],
                   fontSize: 25.0,
                   color: Colors.transparent,
                   decoration: TextDecoration.underline,
                   decorationThickness: 2,
-                  decorationColor: Colors.tealAccent,
+                  decorationColor: const Color(0xFFFF7043),
                 )
               : GoogleFonts.roboto(color: Colors.black, fontSize: 20.0),
           child: Text(widget.title),
@@ -74,7 +64,6 @@ class _TabsWebState extends State<TabsWeb> {
   }
 }
 
-// A stateless widget to create a list of navigation tabs for the web
 class TabsWebList extends StatelessWidget {
   const TabsWebList({Key? key}) : super(key: key);
 
@@ -86,8 +75,7 @@ class TabsWebList extends StatelessWidget {
         TabsWeb(title: "Home", route: '/'),
         Spacer(),
         TabsWeb(title: "Works", route: '/works'),
-        Spacer(),
-        TabsWeb(title: "Blog", route: '/blog'),
+
         Spacer(),
         TabsWeb(title: "About", route: '/about'),
         Spacer(),
@@ -98,21 +86,18 @@ class TabsWebList extends StatelessWidget {
   }
 }
 
-// A stateless widget for creating navigation tabs on mobile devices
 class TabsMobile extends StatelessWidget {
   final String text; // Text to display on the tab
   final String route; // Route to navigate to when the tab is clicked
 
   const TabsMobile({Key? key, required this.text, required this.route})
-      : super(key: key);
+    : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
       elevation: 20.0,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(5.0),
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
       height: 50.0,
       minWidth: 200.0,
       color: Colors.black,
@@ -121,14 +106,12 @@ class TabsMobile extends StatelessWidget {
         style: GoogleFonts.openSans(fontSize: 20.0, color: Colors.white),
       ),
       onPressed: () {
-        // Navigate to the specified route when the tab is clicked
         Navigator.of(context).pushNamed(route);
       },
     );
   }
 }
 
-// Function to create an icon button for launching URLs
 Widget urlLauncher(String imgPath, String url) {
   return IconButton(
     icon: SvgPicture.asset(imgPath, color: Colors.black, width: 35),
@@ -139,7 +122,6 @@ Widget urlLauncher(String imgPath, String url) {
   );
 }
 
-// A stateless widget for creating a drawer with profile information and social media links on the web
 class DrawersWeb extends StatelessWidget {
   const DrawersWeb({Key? key}) : super(key: key);
 
@@ -152,25 +134,31 @@ class DrawersWeb extends StatelessWidget {
         children: [
           const CircleAvatar(
             radius: 72.0,
-            backgroundColor: Colors.tealAccent,
+            backgroundColor: const Color(0xFFFF7043),
             child: CircleAvatar(
               radius: 70.0,
               backgroundColor: Colors.white,
-              backgroundImage: AssetImage("assets/image.png"),
+              backgroundImage: AssetImage("assets/pic2.jpg"),
             ),
           ),
           const SizedBox(height: 15.0),
-          const SansBold("Paulina Knop", 30.0),
+          const SansBold("Sumit Kushwaha", 30.0),
           const SizedBox(height: 15.0),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              urlLauncher("assets/instagram.svg",
-                  "https://www.instagram.com/tomcruise/"),
               urlLauncher(
-                  "assets/twitter.svg", "https://www.twitter.com/tomcruise"),
-              urlLauncher("assets/github.svg",
-                  "https://github.com/sagnik150699/paulina_knop"),
+                "assets/instagram.svg",
+                "https://www.instagram.com/sumit_kushwaha7875?igsh=MTgxZzlxcTZmbms5eQ==",
+              ),
+              urlLauncher(
+                "assets/linkedin.svg",
+                "https://www.linkedin.com/in/sumit-kumar-kushwaha-125634295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+              ),
+              urlLauncher(
+                "assets/github.svg",
+                "https://github.com/sumitkumarkgit2425",
+              ),
             ],
           ),
         ],
@@ -179,7 +167,6 @@ class DrawersWeb extends StatelessWidget {
   }
 }
 
-// A stateless widget for creating a drawer with navigation tabs and social media links on mobile devices
 class DrawersMobile extends StatelessWidget {
   const DrawersMobile({Key? key}) : super(key: key);
 
@@ -196,17 +183,16 @@ class DrawersMobile extends StatelessWidget {
                 shape: BoxShape.circle,
                 border: Border.all(width: 2.0, color: Colors.black),
               ),
-              child: Image.asset(
-                'assets/profile2-circle.png',
-                filterQuality: FilterQuality.high,
+              child: CircleAvatar(
+                radius: 60.0,
+                backgroundColor: Colors.white,
+                backgroundImage: AssetImage("assets/pic2.jpg"),
               ),
             ),
           ),
           const TabsMobile(text: "Home", route: '/'),
           const SizedBox(height: 20.0),
           const TabsMobile(text: "Works", route: '/works'),
-          const SizedBox(height: 20.0),
-          const TabsMobile(text: "Blog", route: '/blog'),
           const SizedBox(height: 20.0),
           const TabsMobile(text: "About", route: '/about'),
           const SizedBox(height: 20.0),
@@ -215,12 +201,18 @@ class DrawersMobile extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              urlLauncher("assets/instagram.svg",
-                  "https://www.instagram.com/tomcruise/"),
               urlLauncher(
-                  "assets/twitter.svg", "https://www.twitter.com/tomcruise"),
-              urlLauncher("assets/github.svg",
-                  "https://github.com/sagnik150699/paulina_knop"),
+                "assets/instagram.svg",
+                "https://www.instagram.com/tomcruise/",
+              ),
+              urlLauncher(
+                "assets/linkedin.svg",
+                "https://www.linkedin.com/in/sumit-kumar-kushwaha-125634295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+              ),
+              urlLauncher(
+                "assets/github.svg",
+                "https://github.com/sagnik150699/portfolio_app",
+              ),
             ],
           ),
         ],
@@ -229,7 +221,6 @@ class DrawersMobile extends StatelessWidget {
   }
 }
 
-// A stateless widget for displaying bold text using the Sans font
 class SansBold extends StatelessWidget {
   final String text; // Text to display
   final double size; // Font size
@@ -245,7 +236,6 @@ class SansBold extends StatelessWidget {
   }
 }
 
-// A stateless widget for displaying text using the Sans font
 class Sans extends StatelessWidget {
   final String text; // Text to display
   final double size; // Font size
@@ -254,14 +244,10 @@ class Sans extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: GoogleFonts.openSans(fontSize: size),
-    );
+    return Text(text, style: GoogleFonts.openSans(fontSize: size));
   }
 }
 
-// A stateless widget for displaying text using the Abel font with customizable properties
 class AbelCustom extends StatelessWidget {
   final String text; // Text to display
   final double size; // Font size
@@ -289,16 +275,15 @@ class AbelCustom extends StatelessWidget {
   }
 }
 
-// A stateless widget for creating a form field with a label and validation
 class TextForm extends StatelessWidget {
   final String text; // Label text
   final double containerWidth; // Width of the form field container
   final String hintText; // Hint text to display in the form field
   final int? maxLines; // Maximum number of lines for the form field
   final TextEditingController
-      controller; // Controller for managing the form field input
+  controller; // Controller for managing the form field input
   final String? Function(String?)?
-      validator; // Validator function for form field validation
+  validator; // Validator function for form field validation
 
   const TextForm({
     Key? key,
@@ -333,11 +318,14 @@ class TextForm extends StatelessWidget {
                 borderRadius: BorderRadius.all(Radius.circular(15.0)),
               ),
               enabledBorder: const OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.teal),
+                borderSide: BorderSide(color: const Color(0xFFFF7043)),
                 borderRadius: BorderRadius.all(Radius.circular(10.0)),
               ),
               focusedBorder: const OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.tealAccent, width: 2.0),
+                borderSide: BorderSide(
+                  color: const Color(0xFFFF7043),
+                  width: 2.0,
+                ),
                 borderRadius: BorderRadius.all(Radius.circular(15.0)),
               ),
               hintText: hintText,
@@ -350,7 +338,6 @@ class TextForm extends StatelessWidget {
   }
 }
 
-// A stateful widget for creating an animated card with an image and optional text
 class AnimatedCard extends StatefulWidget {
   final String imagePath; // Path to the image to display on the card
   final String? text; // Optional text to display on the card
@@ -373,7 +360,6 @@ class AnimatedCard extends StatefulWidget {
   _AnimatedCardState createState() => _AnimatedCardState();
 }
 
-// State class for AnimatedCard
 class _AnimatedCardState extends State<AnimatedCard>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller = AnimationController(
@@ -400,9 +386,9 @@ class _AnimatedCardState extends State<AnimatedCard>
         elevation: 30.0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15.0),
-          side: const BorderSide(color: Colors.tealAccent),
+          side: const BorderSide(color: const Color(0xFFFF7043)),
         ),
-        shadowColor: Colors.tealAccent,
+        shadowColor: const Color(0xFFFF7043),
         child: Padding(
           padding: const EdgeInsets.all(15.0),
           child: Column(
@@ -426,12 +412,18 @@ class _AnimatedCardState extends State<AnimatedCard>
 
 // Class for adding data to Firestore
 class AddDataFirestore {
-  final CollectionReference response =
-      FirebaseFirestore.instance.collection('messages');
+  final CollectionReference response = FirebaseFirestore.instance.collection(
+    'messages',
+  );
 
   // Method for adding response data to Firestore
-  Future<bool> addResponse(String firstName, String lastName, String email,
-      String phoneNumber, String message) async {
+  Future<bool> addResponse(
+    String firstName,
+    String lastName,
+    String email,
+    String phoneNumber,
+    String message,
+  ) async {
     try {
       await response.add({
         'first name': firstName,
@@ -454,9 +446,7 @@ Future<void> DialogError(BuildContext context, String title) {
   return showDialog<void>(
     context: context,
     builder: (BuildContext context) => AlertDialog(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10.0),
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
       title: SansBold(title, 20.0),
     ),
   );
@@ -576,7 +566,7 @@ class _ContactFormWebState extends State<ContactFormWeb> {
             ),
             height: 60.0,
             minWidth: 200.0,
-            color: Colors.tealAccent,
+            color: const Color(0xFFFF7043),
             child: const SansBold("Submit", 20.0),
           ),
           const SizedBox(height: 10.0),
@@ -586,7 +576,6 @@ class _ContactFormWebState extends State<ContactFormWeb> {
   }
 }
 
-// A stateful widget for creating a contact form for mobile devices
 class ContactFormMobile extends StatefulWidget {
   const ContactFormMobile({Key? key}) : super(key: key);
 
@@ -683,7 +672,7 @@ class _ContactFormMobileState extends State<ContactFormMobile> {
             ),
             height: 60.0,
             minWidth: widthDevice / 2.2,
-            color: Colors.tealAccent,
+            color: const Color(0xFFFF7043),
             child: const SansBold("Submit", 20.0),
           ),
         ],
@@ -692,21 +681,17 @@ class _ContactFormMobileState extends State<ContactFormMobile> {
   }
 }
 
-// Function to create a container with teal border and text
-Widget tealContainer(String text) {
+Widget OrangeContainer(String text) {
   return Container(
     decoration: BoxDecoration(
       border: Border.all(
-        color: Colors.tealAccent,
+        color: const Color(0xFFFF7043),
         style: BorderStyle.solid,
         width: 2.0,
       ),
       borderRadius: BorderRadius.circular(5.0),
     ),
     padding: const EdgeInsets.all(7.0),
-    child: Text(
-      text,
-      style: GoogleFonts.openSans(fontSize: 15.0),
-    ),
+    child: Text(text, style: GoogleFonts.openSans(fontSize: 15.0)),
   );
 }

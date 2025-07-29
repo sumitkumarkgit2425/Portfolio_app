@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:paulina_knop/components.dart';
+import 'package:portfolio_app/components.dart';
 
-/// The main widget for displaying the landing page on mobile devices.
 class LandingPageMobile extends StatefulWidget {
   const LandingPageMobile({Key? key}) : super(key: key);
 
@@ -22,21 +21,23 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
           elevation: 0.0,
           iconTheme: const IconThemeData(size: 35.0, color: Colors.black),
         ),
-        // Drawer for navigation
+
         endDrawer: const DrawersMobile(),
         body: ListView(
           children: [
-            // Introduction section
-            const CircleAvatar(
-              radius: 117.0,
-              backgroundColor: Colors.tealAccent,
-              child: CircleAvatar(
-                radius: 113.0,
-                backgroundColor: Colors.black,
-                child: CircleAvatar(
-                  radius: 110.0,
-                  backgroundColor: Colors.white,
-                  backgroundImage: AssetImage("assets/image-circle.png"),
+            Center(
+              child: Container(
+                width: 294, // 2 * 147 (your previous outer radius)
+                height: 294,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    color: Color(0xFFFF7043), // Orange border
+                    width: 4.0,
+                  ),
+                ),
+                child: ClipOval(
+                  child: Image.asset('assets/pic1.jpg', fit: BoxFit.cover),
                 ),
               ),
             ),
@@ -51,7 +52,7 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
                     children: [
                       Container(
                         decoration: const BoxDecoration(
-                          color: Colors.tealAccent,
+                          color: const Color(0xFFFF7043),
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(20.0),
                             topRight: Radius.circular(20.0),
@@ -64,7 +65,7 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
                         ),
                         child: const SansBold("Hello I'm", 15.0),
                       ),
-                      const SansBold("Paulina Knop", 40.0),
+                      const SansBold("Sumit Kushwaha", 40.0),
                       const Sans("Flutter developer", 20.0),
                     ],
                   ),
@@ -86,9 +87,9 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
                         direction: Axis.vertical,
                         spacing: 9.0,
                         children: const [
-                          Sans("paulinaknop@gmail.com", 15.0),
-                          Sans("+48 942 564 985", 15.0),
-                          Sans("13/3, Szczecin, Poland", 15.0),
+                          Sans("sumitkk005@gmail.com", 15.0),
+                          Sans("+91 7976362058", 15.0),
+                          Sans("Jaipur,India", 15.0),
                         ],
                       ),
                     ],
@@ -97,7 +98,7 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
               ),
             ),
             const SizedBox(height: 90.0),
-            // About me section
+
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Column(
@@ -106,11 +107,11 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
                 children: [
                   const SansBold("About me", 35.0),
                   const Sans(
-                    "Hello! I'm Paulina Knop I specialize in flutter development",
+                    "Hi! I'm Sumit Kushwaha. I specialize in Flutter development",
                     15.0,
                   ),
                   const Sans(
-                    "I strive to ensure astounding performance with state of the art security for Android, iOS, Web, Mac, Linux",
+                    "I aim to deliver exceptional performance paired with cutting-edge security across Android, iOS, Web, macOS, and Linux platforms.",
                     15.0,
                   ),
                   const SizedBox(height: 10.0),
@@ -118,10 +119,10 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
                     spacing: 7.0,
                     runSpacing: 7.0,
                     children: [
-                      tealContainer("Flutter"),
-                      tealContainer("Firebase"),
-                      tealContainer("Android"),
-                      tealContainer("Windows"),
+                      OrangeContainer("Flutter"),
+                      OrangeContainer("Firebase"),
+                      OrangeContainer("Android"),
+                      OrangeContainer("Windows"),
                     ],
                   ),
                 ],
@@ -153,7 +154,7 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
                   width: 300.0,
                 ),
                 SizedBox(height: 60.0),
-                // Contact section
+
                 ContactFormMobile(),
                 SizedBox(height: 20.0),
               ],

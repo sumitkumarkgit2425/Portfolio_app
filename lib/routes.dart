@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:paulina_knop/common/blog.dart';
-import 'package:paulina_knop/mobile/about_mobile.dart';
-import 'package:paulina_knop/mobile/contact_mobile.dart';
-import 'package:paulina_knop/mobile/works_mobile.dart';
-import 'package:paulina_knop/web/about_web.dart';
-import 'package:paulina_knop/web/landing_page_web.dart';
-import 'package:paulina_knop/web/works_web.dart';
+// import 'package:portfolio_app/common/blog.dart';
+import 'package:portfolio_app/mobile/about_mobile.dart';
+import 'package:portfolio_app/mobile/contact_mobile.dart';
+import 'package:portfolio_app/mobile/works_mobile.dart';
+import 'package:portfolio_app/web/about_web.dart';
+import 'package:portfolio_app/web/landing_page_web.dart';
+import 'package:portfolio_app/web/works_web.dart';
 
 import 'mobile/landing_page_mobile.dart';
 import 'web/contact_web.dart';
 
-/// The class responsible for generating routes based on the provided route settings.
 class Routes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -53,11 +52,7 @@ class Routes {
             },
           ),
         );
-      case '/blog':
-        return MaterialPageRoute(
-          settings: settings,
-          builder: (_) => const Blog(),
-        );
+
       case '/works':
         return MaterialPageRoute(
           settings: settings,
